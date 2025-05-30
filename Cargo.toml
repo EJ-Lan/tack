@@ -1,0 +1,10 @@
+[package]
+name = "tack"
+version = "0.1.0"
+edition = "2024"
+description = "A smart CLI bookmark manager for commands and directories"
+license = "MIT"
+repository = "https://github.com/EJ-Lan/tack"
+
+[dependencies]
+clap = { version = "4.5.39", features = ["derive"] }
