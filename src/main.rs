@@ -1,6 +1,9 @@
 mod cli;
+mod models;
 
 use cli::{Cli, Commands};
+use models::CommandEntry;
+use uuid::Uuid;
 use clap::Parser;
 
 fn main() {
@@ -8,7 +11,15 @@ fn main() {
 
     match &cli.command {
         Commands::Add { command, tags } => {
-            println!("Would add command: '{}', with tags: {:?}", command, tags);
+            let entry = CommandEntry {
+                id: Uuid::new_v4(),
+                command: command.clone(),
+                tags: tags.clone(),
+                created_at: chrono::Utc::now(),
+                last_run: None,
+            };
+            
+            println!("Mock entry created:\n{:#?}", entry);
         }
 
         Commands::Search { query } => {
