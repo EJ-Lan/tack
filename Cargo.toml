@@ -8,3 +8,6 @@ repository = "https://github.com/EJ-Lan/tack"
 
 [dependencies]
 mockall = "0.13.1"
+
+[dev-dependencies]
+rstest = "0.25.0"
