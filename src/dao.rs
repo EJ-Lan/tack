@@ -3,11 +3,11 @@ use std::fs::{File, OpenOptions};
 use std::io::{BufRead, BufReader, Write};
 use std::{io::Error, path::PathBuf};
 pub trait IBookmarkDao {
-    /// ブックマークを保存する
+    /// Save a bookmark
     fn save(&mut self, bookmark: &Bookmark) -> Result<(), Error>;
-    /// ブックマークを削除する
+    /// Delete a bookmark
     fn delete(&mut self, path: &str) -> Result<(), Error>;
-    /// 全てのブックマークを取得する
+    /// Get all bookmarks
     fn find_all(&mut self) -> Result<Vec<Bookmark>, Error>;
 }
 
