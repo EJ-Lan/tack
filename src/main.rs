@@ -1,5 +1,3 @@
-mod bookmark;
-mod path;
-mod dao;
-
-fn main() {}
+fn main() {
+    println!("Hello world");
+}
